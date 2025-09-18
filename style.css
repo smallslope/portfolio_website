@@ -1,0 +1,30 @@
+:root{
+    /* Primary Colours */
+    --primary-700: hsl(13, 70%, 39%);
+    --primary-500: hsl(13, 70%, 52%);
+    --primary-300: hsl(13, 70%, 62%);
+    --primary-200: hsl(13, 70%, 76%);
+    /* Secondary Colours */
+    --secondary-200: hsl(72, 39%, 85%);
+    /* Neutural Colours */
+    --neutral-0: hsl(72, 39%, 85%);
+    --neutral-500: hsl(0, 0%, 50%);
+    --neutral-900: hsl(0, 0%, 14%); 
+
+    /* Semantil Roles */
+    --color-brand: var(--primary-500);
+    --color-brand-hover: var(--primary-700);
+    --color-brand-active: var(--primary-700);
+
+    --color-background-light: var(--neutral-0);
+
+
+
+
+}
+.color-swatch{
+    height: 10rem;
+    width: 10rem;
+    border-radius:10rem;
+  
+}
