@@ -1,0 +1,16 @@
+<template id="color-swatch-template">
+    <link rel="stylesheet" href="/components/color-swatch.css" />
+    <div class="swatch-component">
+        <div class="swatch"></div>
+        <div>
+            <p class="swatch-label">
+                <slot name="color-name">color name</slot>
+            </p>
+            <p class="swatch-label">
+                <slot name="color-value">color value</slot>
+            </p>
+        </div>
+    </div>
+    
+</template>
+^

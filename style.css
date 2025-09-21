@@ -1,15 +1,15 @@
 :root{
     /* Primary Colours */
-    --primary-700: hsl(13, 70%, 39%);
-    --primary-500: hsl(13, 70%, 52%);
-    --primary-300: hsl(13, 70%, 62%);
-    --primary-200: hsl(13, 70%, 76%);
+    --color-primary-700: hsl(13, 70%, 39%);
+    --color-primary-500: hsl(13, 70%, 52%);
+    --color-primary-300: hsl(13, 70%, 62%);
+    --color-primary-200: hsl(13, 70%, 76%);
     /* Secondary Colours */
-    --secondary-200: hsl(72, 39%, 85%);
+    --color-secondary-200: hsl(72, 39%, 85%);
     /* Neutural Colours */
-    --neutral-0: hsl(72, 39%, 85%);
-    --neutral-500: hsl(0, 0%, 50%);
-    --neutral-900: hsl(0, 0%, 14%); 
+    --color-neutral-0: hsl(72, 39%, 97%);
+    --color-neutral-500: hsl(0, 0%, 50%);
+    --color-neutral-900: hsl(0, 0%, 14%); 
 
     /* Semantil Roles */
     --color-brand: var(--primary-500);
@@ -23,8 +23,9 @@
 
 }
 .color-swatch{
-    height: 10rem;
-    width: 10rem;
+    height: 5rem;
+    width: 5rem;
     border-radius:10rem;
+    margin: 1rem;
   
 }

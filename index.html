@@ -8,14 +8,45 @@
         <link rel="icon" href="favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
+        <script src="/components/color-swatch.js"></script>
         <meta name="description" content="Portfolio of Maya, showcasing UX, UI, and web devlopment projects.">
     </head>
     <body>
-        <p>hello</p>
-        <div class="color-swatch" style="background-color: var(--color-brand);"></div>
+        <color-swatch color="var(--color-primary-500)">
+            <span slot="color-name">primary-500</span>
+            <span slot="color-value">#DA5530</span>
+        </color-swatch>
+        <color-swatch color="var(--color-primary-700)">
+            <span slot="color-name">primary-700</span>
+            <span slot="color-value">#A93D1E</span>
+        </color-swatch>
+        <color-swatch color="var(--color-primary-300)">
+            <span slot="color-name">primary-300</span>
+            <span slot="color-value">#E2785A</span>
+        </color-swatch>
+       
+        <color-swatch color="var(--color-primary-300)">
+            <span slot="color-name">primary-200</span>
+            <span slot="color-value">#EDAB98</span>
+        </color-swatch>
+        <color-swatch color="var(--color-neutral-0)">
+            <span slot="color-name">neutral-0</span>
+            <span slot="color-value">#FAFBF6</span>
+        </color-swatch>
+        <color-swatch color="var(--color-neutral-900)">
+            <span slot="color-name">neutral-900</span>
+            <span slot="color-value">#232323</span>
+        </color-swatch>
+        <color-swatch color="var(--color-neutral-900)">
+            <span slot="color-name">neutral-900</span>
+            <span slot="color-value">#232323</span>
+        </color-swatch>
+       
+
+        <!-- <div class="color-swatch" style="background-color: var(--color-brand);"></div>
         <div class="color-swatch" style="background-color: var(--color-brand-hover);"></div>
         <div class="color-swatch" style="background-color: var(--color-brand-active);"></div>
-        <div class="color-swatch" style="background-color: var(--color-background-light);"></div>
+        <div class="color-swatch" style="background-color: var(--color-background-light);"></div> -->
     </body>
     <footer>
 

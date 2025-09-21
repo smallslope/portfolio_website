@@ -1,0 +1,15 @@
+.swatch-component{
+    display: flex;
+    align-items: center;
+}
+.swatch{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    margin: 1rem;
+}
+.swatch-label{
+    color: black;
+    font-family:monospace;
+    font-size: 1rem;
+}
