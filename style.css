@@ -1,31 +1,59 @@
 :root{
-    /* Primary Colours */
+    /*----------------Colors------------------*/
+    /* Primary Colors */
     --color-primary-700: hsl(13, 70%, 39%);
     --color-primary-500: hsl(13, 70%, 52%);
     --color-primary-300: hsl(13, 70%, 62%);
     --color-primary-200: hsl(13, 70%, 76%);
-    /* Secondary Colours */
+    /* Secondary Colors */
     --color-secondary-200: hsl(72, 39%, 85%);
-    /* Neutural Colours */
+    /* Neutural Colors */
     --color-neutral-0: hsl(72, 39%, 97%);
     --color-neutral-500: hsl(0, 0%, 50%);
     --color-neutral-900: hsl(0, 0%, 14%); 
 
     /* Semantil Roles */
-    --color-brand: var(--primary-500);
-    --color-brand-hover: var(--primary-700);
-    --color-brand-active: var(--primary-700);
+    --color-brand: var(--color-primary-500);
+    --color-brand-hover: var(--color-primary-700);
+    --color-brand-active: var(--color-primary-700);
 
-    --color-background-light: var(--neutral-0);
+    --color-background-light: var(--color-neutral-0);
+    --color-surface-light: var(--color-secondary-200);
+    --color-surface-colored: var(--color-primary-200);
 
+    --color-text: var(--color-neutral-900);
+    --color-text-muted: var(--color-neutral-500);
+    --color-text-inverse: var(--color-neutral-0);
+    --color-link: var(--color-primary-500);
+    --color-link-hober: var(--color-primary-700);
 
+    --color-border: var(--color-neutral-500);
+    --color-border-strong: var(--color-neutral-900);
+
+    --color-disabled: var(--color-neutral-500);
+    --color-focus: var(--color-primary-300);
+    --color-selected: var(--color-primary-500);
+
+   /* 
+    --color-success: ;
+    --color-warning: ;
+    --color-error: ;
+    --color-info: ; */
+
+    /*----------------Spacing------------------*/
+    --spacing-4: 0.25rem;
+    --spacing-8: 0.5rem;
+    --spacing-12: 0.75rem;
+    --spacing-16: 1rem;
+    --spacing-24: 1.5rem;
+    --spacing-32: 2rem;
+    --spacing-xxl: 3rem;
 
 
 }
-.color-swatch{
-    height: 5rem;
-    width: 5rem;
-    border-radius:10rem;
-    margin: 1rem;
-  
+.style-container{
+    display: flex;
+    justify-content:space-around;
+    margin-right: var(--spacing-32);
+    margin-left: var(--spacing-32);
 }

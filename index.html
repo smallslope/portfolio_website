@@ -13,7 +13,17 @@
         <meta name="description" content="Portfolio of Maya, showcasing UX, UI, and web devlopment projects.">
     </head>
     <body>
-        <color-swatch-list id="primary-list"></color-swatch-list>
+        <div class="style-container">
+            <color-swatch-list id="primary-list">
+                <span slot="swatch-list-title"> Primary Colors</span>
+            </color-swatch-list>
+            <color-swatch-list id="secondary-list">
+                <span slot="swatch-list-title"> Secondary Colors</span>
+            </color-swatch-list>
+            <color-swatch-list id="neutral-list">
+                <span slot="swatch-list-title"> Neutral Colors</span>
+            </color-swatch-list>
+        </div>
     </body>
     <footer>
 

@@ -54,6 +54,10 @@ var neutralColors = [
 ];
 
 window.addEventListener("DOMContentLoaded", () => {
-    const list = document.getElementById("primary-list");
-    list.data = primaryColors;
+    const primaryColorList = document.getElementById("primary-list");
+    const secondaryColorList = document.getElementById("secondary-list");
+    const neuturalColorList = document.getElementById("neutral-list");
+    primaryColorList.data = primaryColors;
+    secondaryColorList.data = secondaryColors;
+    neuturalColorList.data = neutralColors;
   });

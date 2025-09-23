@@ -3,13 +3,14 @@
     align-items: center;
 }
 .swatch{
-    height: 7rem;
-    width: 7rem;
+    height: 4rem;
+    width: 4rem;
     border-radius: 50%;
-    margin: 1rem;
+    margin: var(--spacing-16);
 }
 .swatch-label{
     color: black;
     font-family:monospace;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    line-height: 0.6rem;
 }
