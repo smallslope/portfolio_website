@@ -51,4 +51,9 @@ var neutralColors = [
         swatch_hsl:"hsl(0, 0%, 14%)"
         
     }
-]
+];
+
+window.addEventListener("DOMContentLoaded", () => {
+    const list = document.getElementById("primary-list");
+    list.data = primaryColors;
+  });

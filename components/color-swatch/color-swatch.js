@@ -8,7 +8,7 @@ class ColorSwatch extends HTMLElement {
         this._swatch = null;
     }
     async connectedCallback() {
-        const res = await fetch("./components/color-swatch.html");
+        const res = await fetch("./components/color-swatch/color-swatch.html");
         const html = await res.text();
         const parser = new DOMParser();
         const doc = parser.parseFromString(html, "text/html");

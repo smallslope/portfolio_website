@@ -6,54 +6,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Maya Osaka Portfolio</title>
         <link rel="icon" href="favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
-        <script src="/components/color-swatch.js"></script>
+        <link rel="stylesheet" href="./style.css">
+        <script src="script.js" defer></script>
+        <script src="./components/color-swatch/color-swatch.js" defer></script>
+        <script src="./components/color-swatch-list/color-swatch-list.js" defer></script>
         <meta name="description" content="Portfolio of Maya, showcasing UX, UI, and web devlopment projects.">
     </head>
     <body>
-        <color-swatch color="var(--color-primary-500)">
-            <span slot="color-name">primary-500</span>
-            <span slot="color-hex">#DA5530</span>
-            <span slot="color-hsl"></span>
-        </color-swatch>
-        <color-swatch color="var(--color-primary-700)">
-            <span slot="color-name">primary-700</span>
-            <span slot="color-hex">#A93D1E</span>
-            <span slot="color-hsl"></span>
-        </color-swatch>
-        <color-swatch color="var(--color-primary-300)">
-            <span slot="color-name">primary-300</span>
-            <span slot="color-hex">#E2785A</span>
-            <span slot="color-hsl"></span>
-        </color-swatch>
-       
-        <color-swatch color="var(--color-primary-300)">
-            <span slot="color-name">primary-200</span>
-            <span slot="color-hex">#EDAB98</span>
-            <span slot="color-hsl"></span>
-        </color-swatch>
-        <color-swatch color="var(--color-neutral-0)">
-            <span slot="color-name">neutral-0</span>
-            <span slot="color-hex">#FAFBF6</span>
-            <span slot="color-hsl"></span>
-        </color-swatch>
-        <color-swatch color="var(--color-neutral-900)">
-            <span slot="color-name">neutral-900</span>
-            <span slot="color-hex">#232323</span>
-            <span slot="color-hsl"></span>
-        </color-swatch>
-        <color-swatch color="var(--color-neutral-900)">
-            <span slot="color-name">neutral-900</span>
-            <span slot="color-hex">#232323</span>
-            <span slot="color-hsl"></span>
-        </color-swatch>
-       
-
-        <!-- <div class="color-swatch" style="background-color: var(--color-brand);"></div>
-        <div class="color-swatch" style="background-color: var(--color-brand-hover);"></div>
-        <div class="color-swatch" style="background-color: var(--color-brand-active);"></div>
-        <div class="color-swatch" style="background-color: var(--color-background-light);"></div> -->
+        <color-swatch-list id="primary-list"></color-swatch-list>
     </body>
     <footer>
 
