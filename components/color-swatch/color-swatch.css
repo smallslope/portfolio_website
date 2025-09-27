@@ -10,7 +10,7 @@
 }
 .swatch-label{
     color: black;
-    font-family:monospace;
+    font-family: var(--font-family- primary);
     font-size: 0.9rem;
     line-height: 0.6rem;
 }

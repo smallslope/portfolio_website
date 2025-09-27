@@ -48,7 +48,7 @@
     --spacing-16: 1rem;
     --spacing-24: 1.5rem;
     --spacing-32: 2rem;
-    --spacing-xxl: 3rem;
+    --spacing-48: 3rem;
 
     /*border-radius*/
     --radius-4: 0.25rem;
@@ -61,13 +61,14 @@
     /*----------------Typography------------------*/
     
     /* font-families */
-    --font-primary:  'Azaret Mono', monospace;
+    --font-family-primary:  'Azaret Mono', monospace;
 
 
     /* font-sizes */
     --font-size-32: 2rem;
     --font-size-24: 1.5rem;
     --font-size-20: 1.25rem;
+    --font-size-18: 1.125rem;
     --font-size-16: 1rem;
     --font-size-14: 0.875rem;
 
@@ -76,12 +77,50 @@
 
     /*font-weight*/
     --font-weight-regular: 400;
-    --font-weight-semiBold: 500;
+    --font-weight-semiBold: 600;
     --font-weight-bold: 700;
 }
-.style-container{
+body{
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-16);
+    line-height: var(--leading-normal);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text);
+    background: var(--color-background-light);
+}
+.heading-1{
+    font-size: var(--font-size-32);
+    font-weight: (--font-weight-semiBold);
+}
+.body-large{
+    font-size: var(--font-size-20);
+}
+.body-reg{
+    font-size: var(--font-size-16);
+}
+.txt-bold{
+    font-weight: var(--font-weight-bold);
+}
+.txt-semibold{
+    font-weight: var(--font-weight-semiBold);
+}
+.txt-italic{
+    font-style: italic;
+}
+.txt-underlined{
+    text-decoration: underline;
+}
+
+
+.style-flex-container{
     display: flex;
-    justify-content:space-around;
-    margin-right: var(--spacing-32);
-    margin-left: var(--spacing-32);
+    justify-content:left;
+}
+.style-outer-container{
+    display: flex;
+    flex-direction:column;
+    margin: var(--spacing-32);
+}
+.typography-item{
+    margin: var(--spacing-4);
 }
