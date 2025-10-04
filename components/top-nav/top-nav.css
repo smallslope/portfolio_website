@@ -1,0 +1,127 @@
+h1{
+    font-size: var(--font-size-32);
+    font-weight: (--font-weight-semiBold);
+    color: var(--color-text);
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+.top-nav__nav-bar{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: var(--spacing-16) 0;     
+    margin: 0 var(--spacing-72); 
+}
+.top-nav__title:hover{
+    color: var(--color-brand-hover);
+}
+.top-nav__link{
+    font-size: var(--font-size-16);
+    margin: var(--spacing-16);
+    color: var(--color-neutral-900);
+}
+.top-nav__link:hover{
+    color: var(--color-brand-hover);
+    text-decoration: underline;
+}
+.top-nav__link--active{
+    color: var(--color-brand-active);
+    font-weight: var(--font-weight-bold);
+}
+
+.icon-ms{
+    width: var(--icon-ms);
+    height: var(--icon-ms);
+}
+.top-nav-menu--mobile{
+    display: none;
+}
+#menu-icon{
+    display: none;
+    position: relative;
+    width: var(--icon-ms);
+    height: var(--icon-ms);
+}
+
+/*Tablets*/
+@media (max-width: 1024px){
+
+}
+/*Mobile*/
+@media (max-width: 768px){
+    h1{
+        font-size: var(--font-size-24);
+        font-weight: (--font-weight-semiBold);
+        margin: 0;
+    }
+    p{
+        font-size: var(--font-size-14);
+        margin: 0;
+    }
+    .top-nav__nav-bar{
+        padding: var(--spacing-8) 0;     
+        margin: 0 var(--spacing-16);
+        flex-direction: column;
+    }
+    .body-large{
+        font-size: var(--font-size-18);
+    }
+    .body-reg{
+        font-size: var(--font-size-14);
+    }
+    #menu-icon{
+        display: block;
+        opacity: 1;
+    }
+    #menu-icon svg path{
+        fill: var(--color-neutral-900);
+    }
+    #menu-icon:hover svg path{
+        fill: var(--color-brand-hover);
+    }
+    #burger-icon, #x-icon{
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height: 100%;
+        transition: transform 0.4s ease, opacity 0.3s ease;
+        transform-origin: center;
+    }
+    .icon{
+        width: var(--spacing-32);
+        height: var(--spacing-32);
+    }
+    #burger-icon {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+      }
+    #x-icon{
+        opacity: 0;
+        transform: rotate(-90deg) scale(0.8);
+    }
+    #menu-icon.active #burger-icon{
+        opacity: 0;
+        transform: rotate(90deg) scale(0.8);
+    }
+    #menu-icon.active #x-icon{
+        display: inline-block;
+        opacity: 1;
+        transform: rotate(0) scale(1);
+    }
+    
+    #top-nav__menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #top-nav__nav-row {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
