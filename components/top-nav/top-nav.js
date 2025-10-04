@@ -10,22 +10,61 @@ class TopNav extends HTMLElement {
         const parser = new DOMParser();
         const doc = parser.parseFromString(html, "text/html");
         const template = doc.getElementById("top-nav-template");
-        this.shadowRoot.appendChild(template.content);
+        this.shadowRoot.appendChild(template.content.cloneNode(true));
+        
+        const menuIcon = this.shadowRoot.querySelector("menu-icon");
+        const menu = this.shadowRoot.querySelector(".top-nav__menu");
         const links = this.shadowRoot.querySelectorAll(".top-nav__link");
+
         links.forEach(link => {
             link.addEventListener("click", () => {
                 links.forEach(l => l.classList.remove("top-nav__link--active"));
-                link.classList.toggle("top-nav__link--active");
-            })
-        });
-        const menuIcon = this.shadowRoot.getElementById("menu-icon");
-        menuIcon.addEventListener("click", () => {
-            menuIcon.classList.toggle("active");
-        })
+                link.classList.add("top-nav__link--active");
 
-        document.createElementNS("http://www.w3.org/2000/svg", "svg");
-        const response = await fetch('/icons/burger.svg');
-        this.svgText = await response.text();
+                if (window.innerWidth <= 768){
+                    menuIcon.removeAttribute("open");
+                    menu.style.display = "none";
+                    window.dispatchEvent(new CustomEvent("resizetoggle", { detail: {}}));
+                }
+            });
+        });
+        
+        const title = this.shadowRoot.querySelector(".top-nav__title");
+        const homeLink = this.shadowRoot.getElementById("home-link");
+
+        if (title){
+            title.addEventListener("click", () => {
+                links.forEach( l => l.classList.remove("top-nav__link--active"));
+
+                if (homeLink){
+                    homeLink.classList.add("top-nav__link--active");
+                }
+
+                if (window.innerWidth <= 768){
+                    menuIcon.removeAttribute("open");
+                    menu.style.display = "none";
+                }
+            });
+        }
+        menuIcon.addEventListener("toggle", (e) => {
+            const isOpen = e.detail.open;
+
+            if (window.innerWidth <= 768) {
+                menu.style.display = isOpen ? "flex" : "none";
+            }
+        });
+        const handleResize = () => {
+            if (window.innerWidth > 768){
+                menu.style.display = "flex";
+                menuIcon.style.display = "none";
+            } else{
+                menu.style.display = "none";
+                menuIcon.style.display = "block";
+                menuIcon.removeAttribute("open");
+            }
+        };
+        handleResize();
+        window.addEventListener("resize", handleResize);
     }
 }
 customElements.define("top-nav", TopNav);

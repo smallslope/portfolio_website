@@ -7,7 +7,10 @@ h1{
 a{
     text-decoration: none;
 }
-.top-nav__nav-bar{
+menu-icon{
+    display:none;
+}
+.top-nav-component{
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -31,19 +34,6 @@ a{
     font-weight: var(--font-weight-bold);
 }
 
-.icon-ms{
-    width: var(--icon-ms);
-    height: var(--icon-ms);
-}
-.top-nav-menu--mobile{
-    display: none;
-}
-#menu-icon{
-    display: none;
-    position: relative;
-    width: var(--icon-ms);
-    height: var(--icon-ms);
-}
 
 /*Tablets*/
 @media (max-width: 1024px){
@@ -60,68 +50,25 @@ a{
         font-size: var(--font-size-14);
         margin: 0;
     }
-    .top-nav__nav-bar{
+    menu-icon{
+        display:block;
+    }
+    .top-nav-component{
         padding: var(--spacing-8) 0;     
         margin: 0 var(--spacing-16);
         flex-direction: column;
     }
-    .body-large{
-        font-size: var(--font-size-18);
-    }
-    .body-reg{
-        font-size: var(--font-size-14);
-    }
-    #menu-icon{
-        display: block;
-        opacity: 1;
-    }
-    #menu-icon svg path{
-        fill: var(--color-neutral-900);
-    }
-    #menu-icon:hover svg path{
-        fill: var(--color-brand-hover);
-    }
-    #burger-icon, #x-icon{
-        position: absolute;
-        top:0;
-        left:0;
-        width:100%;
-        height: 100%;
-        transition: transform 0.4s ease, opacity 0.3s ease;
-        transform-origin: center;
-    }
-    .icon{
-        width: var(--spacing-32);
-        height: var(--spacing-32);
-    }
-    #burger-icon {
-        opacity: 1;
-        transform: rotate(0deg) scale(1);
-      }
-    #x-icon{
-        opacity: 0;
-        transform: rotate(-90deg) scale(0.8);
-    }
-    #menu-icon.active #burger-icon{
-        opacity: 0;
-        transform: rotate(90deg) scale(0.8);
-    }
-    #menu-icon.active #x-icon{
-        display: inline-block;
-        opacity: 1;
-        transform: rotate(0) scale(1);
-    }
     
-    #top-nav__menu {
-        display: flex;
+    .top-nav__menu {
+        display: none;
         flex-direction: column;
         align-items: center;
     }
-
     #top-nav__nav-row {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         width: 100%;
         justify-content: space-between;
+        align-items: center;
     }
 }

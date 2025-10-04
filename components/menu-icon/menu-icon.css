@@ -1,0 +1,19 @@
+.menu-icon{
+    display: inline-block;
+    width: var(--icon-ms);
+    height: var(--icon-ms);
+    cursor: pointer;
+}
+.burger-icon{
+    display: block;
+}
+.close-icon{
+    display: none;
+}
+.menu-icon.open .burger-icon{
+    display: block;
+}
+.menu-icon.open .close-icon{
+    display: none;
+}
+
