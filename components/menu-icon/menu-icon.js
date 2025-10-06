@@ -16,6 +16,8 @@ class MenuIcon extends HTMLElement{
         const template = doc.getElementById("menu-icon-template");
         this.shadowRoot.appendChild(template.content.cloneNode(true)); 
 
+        //Menu Icons//
+
         const container = this.shadowRoot.querySelector(".menu-icon");
 
         const [burgerSVG, closeSVG] = await Promise.all([
@@ -39,7 +41,6 @@ class MenuIcon extends HTMLElement{
             );
             this._open = !this._open;
             this._updateIconVisibility();
-            // this.dispatchEvent(new CustomEvent("toggle", { detail: { open: this._open}}));
         });
     }
     async _getSVG(url) {

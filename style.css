@@ -85,14 +85,24 @@
     --font-weight-semiBold: 600;
     --font-weight-bold: 700;
 }
+html,body{
+    height: 100%;
+    margin: 0;
+}
 body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: var(--font-family-primary);
     font-size: var(--font-size-16);
     line-height: var(--leading-normal);
     font-weight: var(--font-weight-regular);
     color: var(--color-text);
     background: var(--color-background-light);
-    margin: 0;
+
+}
+main {
+    flex: 1;
 }
 h1{
     font-size: var(--font-size-32);
