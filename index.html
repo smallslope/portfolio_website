@@ -6,17 +6,43 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Maya Osaka Portfolio</title>
         <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./portfolio.css">
         <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Pacifico&display=swap" rel="stylesheet">
         <script src="script.js"></script>
         <script type="module" src="./components/menu-icon/menu-icon.js"></script>
         <script type="module" src="./components/top-nav/top-nav.js"></script>
         <script type="module" src="./components/footer/footer.js"></script>
+        <script type="module" src="./components/project-card/project-card.js"></script>
+        <script type="module" src="./components/img-test/"></script>
         <meta name="description" content="Portfolio of Maya, showcasing UX, UI, and web devlopment projects.">
     </head>
     <body>
         <top-nav></top-nav>
         <main>
-            
+            <project-card>
+                <span slot="image">
+                    <img class="project-card__image" src="./assets/imgs/homepage/london-parkive-hp-thumbnail-min.png">
+                </span>
+                <span slot="title">London Parkive</span>
+                <span slot="tag-name">Web Design & Development/Data visualisation</span>
+                <span slot="description">Building an interactive map showcasing the evolution of London’s parks and open spaces</span>
+            </project-card>
+            <project-card>
+                <span slot="image">
+                    <img class="project-card__image" src="./assets/imgs/homepage/sensco-hp-thumbnail-min.png">
+                </span>
+                <span slot="title">Sensco App</span>
+                <span slot="tag-name">UI/UX</span>
+                <span slot="description">Designing an e-commerce app for a supermarket</span>
+            </project-card>
+            <project-card>
+                <span slot="image">
+                    <img class="project-card__image" src="./assets/imgs/homepage/asfb-hp-thumbnail-min.png">
+                </span>
+                <span slot="title">A Synonym for Break</span>
+                <span slot="tag-name">Web Design & Devlopment</span>
+                <span slot="description">Building a website for a BA Design Graduate Exhibition</span>
+            </project-card>
         </main>
         <site-footer></site-footer>
     </body>

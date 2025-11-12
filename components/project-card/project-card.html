@@ -1,0 +1,25 @@
+<template id="project-card-template">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="./components/project-card/project-card.css">
+    <div class="project-card-container">
+        <div class="image-container">
+            <slot name="image"></slot>
+        </div>
+        <div class="description-section">
+            <h1 class="row">
+                <slot name="title">Project Title</slot>
+            </h1>
+            <div class="tags-row row tag body-reg">
+                <slot name="tag-name">tag</slot>
+            </div>
+            <div class="description-container row">
+                <slot name="description" class="body-reg">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </slot>
+            </div>
+            <button class="primary-btn row">
+                <slot name="cta">View Project</slot>
+            </button>
+        </div>
+    </div>
+</template>

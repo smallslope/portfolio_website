@@ -56,6 +56,7 @@
     --radius-4: 0.25rem;
     --radius-8: 0.5rem;
     --radius-16: 1rem;
+    --radius-48: 3rem;
 
     /*border-width*/
     --border-1: 0.0625rem
@@ -63,6 +64,10 @@
 
     /*icon-sizes*/
     --icon-ms: 1.5rem;
+
+    /*page-content-width*/
+    --page-content-width-desktop: 68rem;
+    --page-content-width-mobile: 96vw;
     /*----------------Typography------------------*/
     
     /* font-families */
@@ -90,8 +95,6 @@ html,body{
     margin: 0;
 }
 body{
-    display: flex;
-    flex-direction: column;
     min-height: 100vh;
     font-family: var(--font-family-primary);
     font-size: var(--font-size-16);
@@ -103,6 +106,9 @@ body{
 }
 main {
     flex: 1;
+    display: flex;
+    flex-direction:column;
+    align-items: center;;
 }
 h1{
     font-size: var(--font-size-32);
@@ -115,6 +121,25 @@ p{
 }
 a{
     color: var(--color-link);
+}
+a.cta-txt{
+    color: var(--color-text-inverse);
+    text-decoration: none;
+}
+
+button {
+    align-self: flex-start;
+    background-color: var(--color-brand-active);
+    color: var(--color-text-inverse);
+    font-size: var(--font-size-16);
+    border: none;
+    border-radius: var(--radius-48);
+    padding: var(--spacing-16) var(--spacing-24);
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-semiBold);
+}
+button:hover{
+    background-color: var(--color-brand-hover);
 }
 .body-large{
     font-size: var(--font-size-20);
@@ -138,7 +163,7 @@ a{
 /* --------------- Media Queries ----------------*/
 /*Tablet*/
 @media (max-width: 1024px){
-
+ 
 }
 /*Mobile*/
 @media (max-width: 768px){
