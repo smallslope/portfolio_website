@@ -31,9 +31,11 @@
 @media (max-width: 1024px){
    
     .image-container{
-        width: fit-content;
+        max-width: var(--page-content-width-mobile);
         height: auto;
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content:center;
     }
     .description-section{
         margin: 0;
@@ -46,11 +48,15 @@
         justify-content: center;
         align-items: center;
         max-width: var(--page-content-width-mobile);
+        margin: var(--spacing-24);
     } 
     .description-section{
         width: var(--page-content-width-mobile);
     }
     .image-container{
         width: 96%;
+    }
+    .row{
+    margin: var(--spacing-8);
     }
 }
