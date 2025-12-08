@@ -1,5 +1,5 @@
 .section-heading-container{
-max-width: var(--page-content-width-desktop);
+    width: 100%;
 }
 .section-heading{
     padding: var(--spacing-32);
@@ -11,15 +11,9 @@ max-width: var(--page-content-width-desktop);
     width: var(--page-content-width-desktop);
 }
 @media (max-width: 1024px){
- .section-heading-container{
-    width: var(--page-content-width-tablet);
- }
+ 
 }
 @media (max-width: 768px){
-    .section-heading-container{
-        width: var(--page-content-width-mobile);
-        padding: var(--spacing-24);
-    }
     .section-heading{
         padding: var(--spacing-8);
     }

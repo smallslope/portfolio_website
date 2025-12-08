@@ -1,6 +1,6 @@
 footer{
-    padding: var(--spacing-16) 0;     
-    margin: 0 var(--spacing-72); ;
+    width: 100%;
+    max-width: 100%;
 }
 a{
     text-decoration: none;
@@ -13,6 +13,7 @@ a{
 }
 .footer__title{
     cursor: pointer;
+    margin: 0 var(--spacing-16);
 }
 .footer__title:hover{
     color: var(--color-brand-hover);

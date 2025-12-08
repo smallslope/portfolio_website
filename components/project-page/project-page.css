@@ -3,3 +3,24 @@
     max-height: 34rem;
     height: auto;
 }
+.project-page-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+/* --------------- Web Components ----------------*/
+project-card{
+    width: 100%;
+    max-width: 100%;
+}
+@media (max-width: 1024px){
+    .project-page-container{
+     
+    }
+}
+@media (max-width: 768px){
+    .project-page-container{
+      
+    }
+}

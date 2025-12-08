@@ -103,13 +103,14 @@ body{
     font-weight: var(--font-weight-regular);
     color: var(--color-text);
     background: var(--color-background-light);
-
+    display: flex;
+    justify-content: center;
 }
 main {
     flex: 1;
     display: flex;
     flex-direction:column;
-    align-items: center;;
+    align-items: center;
 }
 h1{
     font-size: var(--font-size-32);
@@ -159,6 +160,13 @@ button:hover{
 }
 .txt-underlined{
     text-decoration: underline;
+}
+.page{
+    width: 90vw;
+    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
 
 /* --------------- Media Queries ----------------*/
