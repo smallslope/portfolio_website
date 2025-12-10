@@ -1,0 +1,19 @@
+.sensco-app-page-container{
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+};
+.project-card__image{
+    max-width: 34rem;
+    max-height: 34rem;
+    height: auto;
+    max-height: 16rem;
+}
+
+/* --------------- Web Components ----------------*/
+project-card{
+    width: 100%;
+    max-width: 100%;
+}
