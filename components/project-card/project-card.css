@@ -3,20 +3,20 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin: var(--spacing-32) 0;
 }
 .media-container{
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    width:fit-content;
-    max-height: auto;
-    height: 60vh;
+    width:100%;
+    max-height: 100%;
 }
 ::slotted(img), 
 ::slotted(video){
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 80%;
+    max-height: 60vh;
     width: auto;
     height: auto;
 }
@@ -56,10 +56,19 @@
     .description-section{
         width: 100%;
     }
-    .image-container{
-        width: 100%;
+    .media-container{
+        width: auto;
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
     }
     .row{
     margin: var(--spacing-8);
+    }
+    ::slotted(img), 
+    ::slotted(video){
+        max-width: 100%;
     }
 }
