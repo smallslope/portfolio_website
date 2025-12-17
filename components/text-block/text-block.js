@@ -13,4 +13,4 @@ class TextBlock extends HTMLElement {
         console.log(template);
     }
 }
-customElements.define("text-block", TextBlock);
+customElements.define("text-block", TextBlock); 

@@ -1,4 +1,18 @@
-.text-block-container{
+:host{
     width: 100%;
-    max-width: 100%
-};
+    max-width: 100%;
+    padding: var(--spacing-24) var(--spacing-32);
+    border-radius: 16px;
+}
+:host([variant="background-1"]){
+    background-color: var(--color-surface-light);
+}
+:host([variant="background-2"]){
+    background-color: var( --color-surface-colored);
+}
+
+@media (max-width: 768px){
+    .text-block-container{
+        padding: var(--spacing-8);
+    }
+}

@@ -117,6 +117,16 @@ h1{
     font-weight: (--font-weight-semiBold);
     margin: 0;
 }
+h3{
+    font-size: var(--font-size-20);
+    font-weight: var(--font-weight-bold);
+    margin: 0;
+}
+h4{
+    font-size: var(--font-size-16);
+    font-weight:(--font-weight-semiBold);
+    margin: 0 0 var(--spacing-16) 0;
+}
 p{
     font-size: var(--font-size-16);
     margin: 0;
@@ -181,12 +191,15 @@ button:hover{
 @media (max-width: 768px){
     h1{
         font-size: var(--font-size-24);
-        font-weight: (--font-weight-semiBold);
-        margin: 0;
+    }
+    h3{
+        font-size: var(--font-size-18);
+    }
+    h4{
+        font-size: var(--font-size-16);
     }
     p{
         font-size: var(--font-size-14);
-        margin: 0;
     }
     a{
         color: var(--color-link);

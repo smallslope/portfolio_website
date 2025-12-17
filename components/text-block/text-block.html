@@ -1,6 +1,10 @@
 <template id="text-block-template">
-    <link rel="stylesheet" href="/style.css">
+    <!-- <link rel="stylesheet" href="/style.css"> -->
     <link rel="stylesheet" href="./components/text-block/text-block.css">
     <div class="text-block-container">
+        <div class="txt-underscored">
+            <slot name="heading"></slot>
+        </div>
+        <slot name="body"></slot>
     </div>
 </template> 
