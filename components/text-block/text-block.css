@@ -2,17 +2,33 @@
     width: 100%;
     max-width: 100%;
     padding: var(--spacing-24) var(--spacing-32);
+}
+
+.text-block-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.text-block-content{
+    width: 60%;
+    min-width: var(--desktop-text-block-min-width);
     border-radius: 16px;
 }
-:host([variant="background-1"]){
+:host([variant="background-1"]) .text-block-content{
     background-color: var(--color-surface-light);
+    padding: var(--spacing-24);
 }
-:host([variant="background-2"]){
+:host([variant="baclground-2"]) .text-block-content{
     background-color: var( --color-surface-colored);
+    padding: var(--spacing-24);
 }
 
 @media (max-width: 768px){
-    .text-block-container{
-        padding: var(--spacing-8);
+    :host{
+        padding: var(--spacing-24) var(--spacing-8);
+    }
+    .text-block-content{
+        width: 100%;
+        min-width: 100%;
     }
 }
