@@ -1,0 +1,20 @@
+<template id="quote-block--image-template">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="./components/quote-block--image/quote-block--image.css">
+    <div class="quote-block--image-container">
+        <div class="quote-block--image-contents">
+            <div class="image-container">
+                <slot name="image"></slot>
+            </div>
+            <div class="text-section-container">
+                <div class="text-section">
+                    <img class="quotation" src="../../assets/icons/quote-left.svg">
+                    <div class="text">
+                        <slot name="text"></slot>
+                    </div>
+                    <img class="quotation quote-right" src="../../assets/icons/quote-right.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

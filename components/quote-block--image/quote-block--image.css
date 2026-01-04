@@ -1,0 +1,58 @@
+:host{
+    width: 100%;
+    max-width: 100%;
+    padding: var(--spacing-24) var(--spacing-32);
+}
+:host([variant="background-1"]) .image-container, .text-section-container{
+    background-color: var(--color-surface-light);
+}
+:host([variant="background-2"]) .image-container, .text-section-container{
+    background-color: var(--color-surface-colored);
+}
+.quote-block--image-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.quote-block--image-contents{
+    display: flex;
+    flex-direction: row;
+    min-width: var(--desktop-text-block-min-width);
+    width: 64%;
+}
+.image-container{
+    width:fit-content;
+    height: fit-content;
+    padding: var(--spacing-16);
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    margin-top: 16px;
+}
+.text-section-container{
+    border-radius: var(--radius-16);
+    padding: var(--spacing-24);
+    margin-left: -64px;
+}
+.text-section{
+    margin-left: 48px;
+    display: flex;
+    flex-direction: column;
+}
+.quotation{
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: -16px;
+}
+.quote-right{
+    align-self: flex-end;
+}
+.text{
+    margin: var(--spacing-24);
+}
+::slotted(img){
+    width:8rem;
+    height: 8rem;
+}

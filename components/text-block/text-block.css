@@ -12,7 +12,7 @@
 .text-block-content{
     width: 60%;
     min-width: var(--desktop-text-block-min-width);
-    border-radius: 16px;
+    border-radius: var(--radius-16);
 }
 :host([variant="background-1"]) .text-block-content{
     background-color: var(--color-surface-light);
