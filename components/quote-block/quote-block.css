@@ -1,4 +1,99 @@
-.text-block-container{
+:host{
     width: 100%;
-    max-width: 100%
-};
+    max-width: 100%;
+    padding: var(--spacing-24) var(--spacing-32);
+}
+
+.quote-block-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.quote-block-contents{
+    display: flex;
+    flex-direction: row;
+    min-width: var(--desktop-text-block-min-width);
+    width: 64%;
+}
+.image-container{
+    width:fit-content;
+    height: fit-content;
+    padding: var(--spacing-16);
+    border-radius: 100px;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    margin-top: 16px;
+}
+
+.text-section-container{
+    border-radius: var(--radius-16);
+    padding: var(--spacing-24);
+    margin-left: -64px;
+}
+.text-section{
+    margin-left: 48px;
+    display: flex;
+    flex-direction: column;
+}
+.quotation{
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: -16px;
+}
+.quote-right{
+    align-self: flex-end;
+}
+.text{
+    margin: var(--spacing-24);
+}
+::slotted(img){
+    width:8rem;
+    height: 8rem;
+}
+
+:host([variant="background-1"]) .image-container, .text-section-container{
+    background-color: var(--color-surface-light);
+}
+:host([variant="background-2"]) .image-container, .text-section-container{
+    background-color: var(--color-surface-colored);
+}
+:host([image="false"]) .image-container,  ::slotted(img){
+    display: none;
+}
+:host([image="false"]) .text-section-container{
+    margin-left: 0;
+}
+:host([image="true"]) .image-container,  ::slotted(img){
+    display: flex;
+}
+:host([image="true"]) .text-section-container{
+    margin-left: -64;
+}
+
+
+@media (max-width: 768px){
+    .quote-block-contents{
+        flex-direction: column;
+        align-items: center;
+        min-width: 90%;
+        width: 90%;
+    }
+    .text-section-container{
+        border-radius: var(--radius-16);
+        padding: var(--spacing-8);
+        margin-left: 0;
+        margin-top:-64px;
+        width: 100%;
+    }
+    .text-section{
+        margin-left: 0;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        display: flex;
+        flex-direction: column;
+    }
+    :host([image="false"]) .text-section-container{
+        margin-top: 0;
+    }
+}
