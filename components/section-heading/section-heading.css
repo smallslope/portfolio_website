@@ -10,6 +10,6 @@
 }
 @media (max-width: 768px){
     .section-heading{
-        padding: var(--spacing-8);
+        padding: var(--spacing-8) 0;
     }
 }

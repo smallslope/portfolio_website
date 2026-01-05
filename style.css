@@ -140,6 +140,7 @@ a.cta-txt{
     text-decoration: none;
 }
 li{
+    font-size: var(--font-size-16);
     margin: var(--spacing-24);
 }
 
@@ -207,6 +208,10 @@ button:hover{
     }
     a{
         color: var(--color-link);
+    }
+    li{
+        font-size: var(--font-size-14);
+        margin: var(--spacing-24) 0;
     }
     .body-large{
         font-size: var(--font-size-18);
