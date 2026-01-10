@@ -2,6 +2,19 @@
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="./components/image-carousel/image-carousel.css">
     <div class="image-carousel-container">
-
+        <div class="viewport">
+            <div class="slides">
+                <slot name="image"></slot>
+            </div>
+        </div>
+        <div class="carousel-nav">
+            <button class="arrow-btn arrow-left">
+                <img class="arrow" src="../../assets/icons/left-carousel-arrow.svg">
+            </button>
+            <div class="dots"></div>
+            <button class="arrow-btn arrow-right">
+                <img class="arrow" src="../../assets/icons/right-carousel-arrow.svg">
+            </button>
+        </div>
     </div>
 </template>

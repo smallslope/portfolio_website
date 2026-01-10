@@ -9,6 +9,7 @@
     --color-secondary-200: hsl(72, 39%, 85%);
     /* Neutural Colors */
     --color-neutral-0: hsl(72, 39%, 97%);
+    --color-neutral-200: hsl(0,0%,75%);
     --color-neutral-500: hsl(0, 0%, 50%);
     --color-neutral-900: hsl(0, 0%, 14%); 
 
@@ -30,7 +31,7 @@
     --color-border: var(--color-neutral-500);
     --color-border-strong: var(--color-neutral-900);
 
-    --color-disabled: var(--color-neutral-500);
+    --color-disabled: var(--color-neutral-200);
     --color-focus: var(--color-primary-300);
     --color-selected: var(--color-primary-500);
 

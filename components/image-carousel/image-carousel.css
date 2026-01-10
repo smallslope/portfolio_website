@@ -1,4 +1,50 @@
+:host{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
 .image-carousel-container{
     width: 100%;
     max-width: 100%
 };
+.viewport{
+    position: relative;
+    overflow: hidden;
+}
+.slides{
+    display: flex;
+    width: max-content;
+    transition: transform 0.4s ease;
+    width: 100%;
+}
+.carousel-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* ::slotted(.slide){
+    margin: var(--spacing-16);
+} */
+::slotted(img){
+    flex-shrink: 0;
+    width: 100%;
+    height: auto;
+    margin: var(--spacing-16);
+}
+.dots{
+    display: flex;
+    align-items: center;
+}
+.dot{
+    width:0.75rem;
+    height: 0.75rem;
+    border-radius: 100px;
+    background-color: var(--color-disabled);
+    margin:var(--spacing-4);
+}
+.dot.active{
+    background-color: var(--color-brand-active);
+}
+.arrow-btn{
+    margin: var(--spacing-4);
+}
