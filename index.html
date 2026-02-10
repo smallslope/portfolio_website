@@ -7,7 +7,6 @@
         <title>Maya Osaka Portfolio</title>
         <link rel="stylesheet" href="./style.css">
         <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Pacifico&display=swap" rel="stylesheet">
-        <script src="script.js"></script>
         <script type="module" src="./components/menu-icon/menu-icon.js"></script>
         <script type="module" src="./components/top-nav/top-nav.js"></script>
         <script type="module" src="./components/footer/footer.js"></script>
@@ -30,9 +29,10 @@
             <top-nav></top-nav>
             <main>
                 <home-page></home-page>
-                <sensco-app-page></sensco-app-page>
+                <sensco-app-page data-project="senscoApp" hidden></sensco-app-page>
             </main>
             <site-footer></site-footer>
         </div>
+        <script src="script.js"></script>
     </body>
 </html>

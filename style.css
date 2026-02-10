@@ -1,14 +1,14 @@
 :root{
     /*----------------Colors------------------*/
     /* Primary Colors */
-    --color-primary-700: hsl(13, 70%, 39%);
-    --color-primary-500: hsl(13, 70%, 52%);
-    --color-primary-300: hsl(13, 70%, 62%);
-    --color-primary-200: hsl(13, 70%, 76%);
+    --color-primary-700: hsl(246, 100%, 40%);
+    --color-primary-500: hsl(246, 100%, 51%);
+    --color-primary-300: hsl(246, 100%, 70%);
+    --color-primary-200: hsl(246, 100%, 90%);
     /* Secondary Colors */
-    --color-secondary-200: hsl(72, 39%, 85%);
+    --color-secondary-200: hsl(313,100,90%);
     /* Neutural Colors */
-    --color-neutral-0: hsl(72, 39%, 97%);
+    --color-neutral-0: hsl(0, 0%, 100%);
     --color-neutral-200: hsl(0,0%,75%);
     --color-neutral-500: hsl(0, 0%, 50%);
     --color-neutral-900: hsl(0, 0%, 14%); 
@@ -161,6 +161,7 @@ button {
 }
 button:hover{
     background-color: var(--color-brand-hover);
+    text-decoration: underline;
 }
 .body-large{
     font-size: var(--font-size-20);

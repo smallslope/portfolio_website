@@ -11,6 +11,30 @@ class ProjectCard extends HTMLElement {
         const template = doc.getElementById("project-card-template");
         this.shadowRoot.appendChild(template.content.cloneNode(true));
         console.log(template);
+
+        const project = this.getAttribute('data-project');
+        const mode = this.getAttribute('mode');
+        const button = this.shadowRoot.querySelector('#cta');
+        
+        if(mode === 'homePage'){
+            button.addEventListener('click', () => {
+                this.dispatchEvent(
+                    new CustomEvent('open-project', {
+                        bubbles: true,
+                        composed: true,
+                        detail:{
+                            project
+                        }
+                    })
+                )
+            });
+        }
+        else if(mode === 'projectPage'){
+            const link = this.getAttribute('cta-link');
+            button.addEventListener('click', () => {
+                window.open(link, '_blank');
+            });
+        }
     }
 }
 customElements.define("project-card", ProjectCard);
