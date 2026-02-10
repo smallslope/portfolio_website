@@ -2,6 +2,15 @@
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="./components/single-image/single-image.css">
     <div class="single-image-container">
+        <div class="wrapper">
+            <slot name="image"></slot>
+            <button id="zoom-btn" class="button-with-icon">
+                <img class="btn-icon" src="../../assets/icons/zoom-in.svg">
+                <span>Zoom</span>
+            </button>
+        </div>
+        <div id="modal">
 
+        </div>
     </div>
 </template>

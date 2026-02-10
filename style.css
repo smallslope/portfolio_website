@@ -12,6 +12,9 @@
     --color-neutral-200: hsl(0,0%,75%);
     --color-neutral-500: hsl(0, 0%, 50%);
     --color-neutral-900: hsl(0, 0%, 14%); 
+    
+    /* Modal Colors */
+    --color-modal: hsl(0, 0%, 14% 0.5);
 
     /* Semantil Roles */
     --color-brand: var(--color-primary-500);

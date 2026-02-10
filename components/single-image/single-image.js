@@ -11,6 +11,14 @@ class SingleImage extends HTMLElement {
         const template = doc.getElementById("single-image-template");
         this.shadowRoot.appendChild(template.content.cloneNode(true));
         console.log(template);
+        
+        const zoomButton = document.getElementById('zoom-btn');
+        const modalOverlay = document.getElementById('modal');
+        zoomButton.addEventListener('click', () => {
+        console.log("clicked");
+        });
     }
+
 }
+
 customElements.define("single-image", SingleImage);
