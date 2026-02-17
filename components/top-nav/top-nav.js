@@ -32,13 +32,16 @@ class TopNav extends HTMLElement {
         const title = this.shadowRoot.querySelector(".top-nav__title");
         const homeLink = this.shadowRoot.getElementById("home-link");
 
+        // If the website title is clicked set the homepage to active.//
         if (title){
             title.addEventListener("click", () => {
                 links.forEach( l => l.classList.remove("top-nav__link--active"));
 
                 if (homeLink){
                     homeLink.classList.add("top-nav__link--active");
-                }
+                    eventDispatcher(title, )
+                };
+               
 
                 if (window.innerWidth <= 768){
                     menuIcon.removeAttribute("open");
@@ -66,5 +69,10 @@ class TopNav extends HTMLElement {
         handleResize();
         window.addEventListener("resize", handleResize);
     }
+
+    pageClicked(event){
+        console.log(event.target.dataset.page);   
+    }
 }
 customElements.define("top-nav", TopNav);
+

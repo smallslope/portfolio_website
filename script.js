@@ -1,13 +1,13 @@
 const homePage = document.querySelector('home-page');
-const pages = document.querySelectorAll('[data-project]');
+const pages = document.querySelectorAll('[data-page]');
 
-document.addEventListener('open-project', (event) => {
-    console.log('Event fired!', event.detail.project);
-    const { project } = event.detail;
+document.addEventListener('open-page', (event) => {
+    console.log('Event fired!', event.detail.page);
+    const { page } = event.detail;
     
     homePage.hidden = true;
 
-    pages.forEach(page => {
-        page.hidden = page.dataset.project !== project;
+    pages.forEach(webPage => {
+        webPage.hidden = webPage.dataset.page !== page;
     })
 })

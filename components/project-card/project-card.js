@@ -12,18 +12,18 @@ class ProjectCard extends HTMLElement {
         this.shadowRoot.appendChild(template.content.cloneNode(true));
         console.log(template);
 
-        const project = this.getAttribute('data-project');
+        const page = this.getAttribute('data-page');
         const mode = this.getAttribute('mode');
         const button = this.shadowRoot.querySelector('#cta');
         
         if(mode === 'homePage'){
             button.addEventListener('click', () => {
                 this.dispatchEvent(
-                    new CustomEvent('open-project', {
+                    new CustomEvent('open-page', {
                         bubbles: true,
                         composed: true,
                         detail:{
-                            project
+                            page
                         }
                     })
                 )
