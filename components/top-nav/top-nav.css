@@ -34,7 +34,7 @@ menu-icon{
     color: var(--color-brand-hover);
     text-decoration: underline;
 }
-.top-nav__link--active{
+.active{
     color: var(--color-brand-active);
     font-weight: var(--font-weight-bold);
 }

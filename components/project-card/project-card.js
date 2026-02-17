@@ -23,7 +23,8 @@ class ProjectCard extends HTMLElement {
                         bubbles: true,
                         composed: true,
                         detail:{
-                            page
+                            page,
+                            source: 'project-card'
                         }
                     })
                 )
