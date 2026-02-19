@@ -13,7 +13,11 @@
     height: auto;
     max-height: 16rem;
 }
-
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /* --------------- Web Components ----------------*/
 project-card{
     width: 100%;

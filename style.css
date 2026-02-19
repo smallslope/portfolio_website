@@ -6,7 +6,7 @@
     --color-primary-300: hsl(246, 100%, 70%);
     --color-primary-200: hsl(246, 100%, 90%);
     /* Secondary Colors */
-    --color-secondary-200: hsl(313,100,90%);
+    --color-secondary-200: hsl(313,100%,95%);
     /* Neutural Colors */
     --color-neutral-0: hsl(0, 0%, 100%);
     --color-neutral-200: hsl(0,0%,75%);

@@ -1,4 +1,24 @@
-.text-block-container{
+:host {
     width: 100%;
     max-width: 100%
 };
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.wrapper{
+    flex: 1;
+    margin: var(--spacing-8);
+}
+::slotted(img){
+    max-width: 30%;
+    max-height: 90%;
+    margin: var(--spacing-8);
+}
+::slotted(video){
+    max-width: 30%;
+    max-height: 90%;
+    margin: var(--spacing-8);
+}

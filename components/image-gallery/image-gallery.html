@@ -2,6 +2,16 @@
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="./components/image-gallery/image-gallery.css">
     <div class="image-gallery-container">
-
+        <div class="row">
+            <div class="wrapper">
+                <slot name="image"></slot>
+            </div>
+            <div class="wrapper">
+                <slot name="image"></slot>
+            </div>
+            <div class="wrapper">
+                <slot name="image"></slot>
+            </div>
+        </div>
     </div>
 </template>

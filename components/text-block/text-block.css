@@ -22,7 +22,7 @@
     min-width: var(--desktop-text-block-min-width);
     background-color: var(--color-surface-light);
 }
-:host([variant="baclground-2"]) .text-block-content{
+:host([variant="background-2"]) .text-block-content{
     width: 60%;
     min-width: var(--desktop-text-block-min-width);
     background-color: var( --color-surface-colored);

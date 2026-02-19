@@ -52,12 +52,22 @@
     height: 8rem;
 }
 
-:host([variant="background-1"]) .image-container, .text-section-container{
+:host([variant="background-1"]) .image-container {
     background-color: var(--color-surface-light);
 }
-:host([variant="background-2"]) .image-container, .text-section-container{
+
+:host([variant="background-1"]) .text-section-container {
+    background-color: var(--color-surface-light);
+}
+
+:host([variant="background-2"]) .image-container {
     background-color: var(--color-surface-colored);
 }
+
+:host([variant="background-2"]) .text-section-container{
+    background-color: var(--color-surface-colored);
+}
+
 :host([image="false"]) .image-container,  ::slotted(img){
     display: none;
 }

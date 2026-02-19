@@ -60,10 +60,17 @@
     :host([variant="vertical"]) .image-carousel-container {
         flex-direction:row-reverse;
     }
-    :host([variant="vertical"]) .carousel-nav, :host([variant="vertical"]) .dots{
+    :host([variant="vertical"]) .carousel-nav {
         flex-direction: column;
     }
-    :host([variant="vertical"]) .arrow-left, :host([variant="vertical"]) .arrow-right {
+    :host([variant="vertical"]) .dots {
+        flex-direction: column;
+    }
+    :host([variant="vertical"]) .arrow-left {
+        transform: rotate(90deg);
+        margin: var(--spacing-16) 0;
+    }
+    :host([variant="vertical"]) .arrow-right {
         transform: rotate(90deg);
         margin: var(--spacing-16) 0;
     }

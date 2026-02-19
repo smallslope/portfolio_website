@@ -23,6 +23,7 @@
 }
 .wrapper{
     position: relative;
+    margin: var(--spacing-32);
 }
 #modal{
     position: fixed;
