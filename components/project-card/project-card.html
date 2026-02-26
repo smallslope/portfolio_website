@@ -4,7 +4,7 @@
     <div class="project-card-container">
         <div class="media-container">
             <slot name="media"></slot>
-        </div> 
+        </div>
         <div class="description-section">
             <div class="row">
                  <div>
@@ -13,6 +13,9 @@
             <h1>
                 <slot name="title">Project Title</slot>
             </h1>
+            </div>
+            <div class="row">
+                <slot name="dates"></slot>
             </div>
             <div class="tags-row row tag body-reg">
                 <slot name="tag-name">tag</slot>

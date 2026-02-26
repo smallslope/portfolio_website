@@ -36,6 +36,9 @@ class ProjectCard extends HTMLElement {
                 window.open(link, '_blank');
             });
         }
+        else if(mode === 'disabled'){
+            button.classList.add("disabled");
+        }
     }
 }
 customElements.define("project-card", ProjectCard);
