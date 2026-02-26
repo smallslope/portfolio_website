@@ -11,6 +11,17 @@ class ProjectNav extends HTMLElement {
         const template = doc.getElementById("project-nav-template");
         this.shadowRoot.appendChild(template.content.cloneNode(true));
         console.log(template);
+
+        const list = this.shadowRoot.getElementById('list');
+        list.addEventListener("click", (e) => {
+            this.listClickHandler(e);
+        })
+    }
+    listClickHandler(event){
+        if (event.target.tagName === "LI"){
+            console.log("clicked", event.target.textContent);
+        }
     }
 }
 customElements.define("project-nav", ProjectNav);
+

@@ -41,7 +41,7 @@
         width: 85%;
         min-width: 85%;
     }
-    :host([variant="baclground-2"]) .text-block-content{
+    :host([variant="background-2"]) .text-block-content{
         width: 85%;
         min-width: 85%;
     }

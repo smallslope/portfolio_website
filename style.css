@@ -4,7 +4,7 @@
     --color-primary-700: hsl(246, 100%, 40%);
     --color-primary-500: hsl(246, 100%, 51%);
     --color-primary-300: hsl(246, 100%, 70%);
-    --color-primary-200: hsl(246, 100%, 90%);
+    --color-primary-200: hsl(246, 100%, 95%);
     /* Secondary Colors */
     --color-secondary-200: hsl(313,100%,95%);
     /* Neutural Colors */
@@ -19,6 +19,7 @@
     /* Semantil Roles */
     --color-brand: var(--color-primary-500);
     --color-brand-hover: var(--color-primary-700);
+    --color-brand-hover-light: var(--color-primary-200);
     --color-brand-active: var(--color-primary-500);
 
     --color-background-light: var(--color-neutral-0);
