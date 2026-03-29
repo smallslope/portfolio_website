@@ -44,7 +44,7 @@
     width:0.75rem;
     height: 0.75rem;
     border-radius: 100px;
-    background-color: var(--color-disabled);
+    background-color: var(--color-surface-light);
     margin:var(--spacing-4);
 }
 .dot.active{

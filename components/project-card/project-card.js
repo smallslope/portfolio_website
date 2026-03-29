@@ -18,6 +18,7 @@ class ProjectCard extends HTMLElement {
         
         if(mode === 'homePage'){
             button.addEventListener('click', () => {
+                window.scrollTo({ top: 0 });
                 this.dispatchEvent(
                     new CustomEvent('open-page', {
                         bubbles: true,

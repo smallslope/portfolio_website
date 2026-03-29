@@ -8,14 +8,14 @@
 .media-container{
     flex: 1;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     width:100%;
     max-height: 100%;
 }
 ::slotted(img), 
 ::slotted(video){
-    max-width: 80%;
+    max-width: 100%;
     max-height: 60vh;
     width: auto;
     height: auto;
@@ -26,6 +26,7 @@
     width: auto;
     height: auto;
 }
+
 .description-section{
     display: flex;
     flex-direction: column;
@@ -33,7 +34,7 @@
     margin: 0 var(--spacing-32);
 }
 .row{
-    margin: var(--spacing-16) 0;
+    margin: var(--spacing-12) 0;
 }
 .tag{
     text-decoration: underline;
@@ -46,7 +47,7 @@
     text-decoration: none;
 }
 
-@media (max-width: 1024px){
+/* @media (max-width: 1024px){
    
     .image-container{
         width: 100%;
@@ -59,8 +60,8 @@
         margin: 0;
     }
     
-}
-@media (max-width: 768px){
+} */
+@media (max-width: 1200px){
     .project-card-container{
         flex-direction: column;
         align-items: center;
@@ -82,5 +83,7 @@
     ::slotted(img), 
     ::slotted(video){
         max-width: 100%;
+        width:100%;
+        height: auto;
     }
 }
