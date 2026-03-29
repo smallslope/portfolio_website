@@ -1,0 +1,21 @@
+:host{
+    width: 100%;
+    max-width: 100%;
+}
+.about-page-container{
+    display: flex;
+}
+.profile_image{
+    width: 100%;
+    height: auto;
+}
+.left-column, .right-column{
+    flex: 1;
+    margin: var(--spacing-16);
+
+}
+@media (max-width: 1000px){
+    .about-page-container{
+        flex-direction: column;
+    }
+}

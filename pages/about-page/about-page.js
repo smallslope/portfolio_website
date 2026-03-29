@@ -1,16 +1,16 @@
-class PageTemplate extends HTMLElement {
+class AboutPage extends HTMLElement {
     constructor(){
         super()
         this.attachShadow({mode: "open"})
     }
     async connectedCallback(){
-        const res = await fetch("./page/page-template/page-template.html");
+        const res = await fetch("./pages/about-page/about-page.html");
         const html = await res.text();
         const parser = new DOMParser();
         const doc = parser.parseFromString(html, "text/html");
-        const template = doc.getElementById("page-template-template");
+        const template = doc.getElementById("about-page-template");
         this.shadowRoot.appendChild(template.content.cloneNode(true));
         console.log(template);
     }
 }
-customElements.define("page-template", PageTemplate);
+customElements.define("about-page", AboutPage);

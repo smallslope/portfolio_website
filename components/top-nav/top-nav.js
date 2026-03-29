@@ -12,6 +12,7 @@ class TopNav extends HTMLElement {
         const template = doc.getElementById("top-nav-template");
         this.shadowRoot.appendChild(template.content.cloneNode(true));
         this.setupNav();
+        this.setupExternalLinks();
         document.addEventListener('open-page', (e) => {
             if (e.detail.source === 'project-card') {
                 const links = this.shadowRoot.querySelectorAll('.top-nav__link');
@@ -21,11 +22,20 @@ class TopNav extends HTMLElement {
     } 
     //Each link is linked to the appropriate data attribute (data-page)
     setupNav(){
-        const links = this.shadowRoot.querySelectorAll('.top-nav__link, .top-nav__title');
+        const links = this.shadowRoot.querySelectorAll('.top-nav__link[data-page], .top-nav__title[data-page]');
         links.forEach(link => {
             const page = link.dataset.page;
             this.openPage(link, page); 
         })
+    }
+    setupExternalLinks(){
+        const cvLink = this.shadowRoot.querySelector('#cv-link');
+        if (!cvLink) return;
+
+        cvLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            window.open('/assets/pdfs/cv/maya-osaka-cv.pdf', '_blank');
+        });
     }
     setActiveLink(clickedLink, page){
         const links = this.shadowRoot.querySelectorAll('.top-nav__link');
@@ -51,6 +61,8 @@ class TopNav extends HTMLElement {
     }
     //When a link is clicked it triggers the dispathOpenPage function
     openPage(navLink, page){
+        if (!page) return;
+
         navLink.addEventListener('click', () => {
             this.dispatchOpenPage(page);
             this.setActiveLink(navLink,page);
