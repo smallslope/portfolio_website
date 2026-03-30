@@ -39,7 +39,6 @@ class MenuIcon extends HTMLElement{
             this.dispatchEvent(
                 new CustomEvent("toggle", { detail: { open: this.hasAttribute("open")}})
             );
-            this._open = !this._open;
             this._updateIconVisibility();
         });
     }
@@ -65,16 +64,8 @@ class MenuIcon extends HTMLElement{
 
         if(!burger || !close) return;
 
-        burger.style.display = open ? "block" : "none";
-
-        if (this._open){
-            burger.style.display = "none";
-            close.style.display = "block";
-        }
-        else{
-            burger.style.display = "block";
-            close.style.display = "none";
-        }
+        burger.style.display = open ? "none" : "block";
+        close.style.display = open ? "block" : "none";
     }
 }
 customElements.define("menu-icon", MenuIcon);

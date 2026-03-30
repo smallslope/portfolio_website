@@ -1,25 +1,53 @@
 :host{
     width: 100%;
     max-width: 100%
-};
+}
 .project-nav-container{
     width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items:flex-end;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    padding: var(--spacing-8) 0;
 }
-.nav-dropdown{
+.project-nav-container::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    background-color: var(--color-surface-base, var(--color-background-light));
+    z-index: -1;
+}
+.nav-dropdown-section{
     display: flex;
+    flex-direction: row;
     justify-content: flex-end;
+}
+.dropdown{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 15rem;
 }
 .top-cell{
     display: flex;
+    justify-content:space-between;
     font-weight: var(--font-weight-bold);
-    width:fit-content;
     height:fit-content;
     padding: var(--spacing-8) var(--spacing-16);
     border: 2px solid var(--color-border-strong);
     border-radius: var( --radius-8);
+    margin-bottom: var(--spacing-8);
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--color-text);
+    font: inherit;
+    text-align: left;
 }
 .top-cell:hover{
     background-color: var(--color-brand-hover-light);
@@ -31,4 +59,43 @@
     height: auto;
     padding: 0 0 0 var(--spacing-8);
     
+}
+.dropdown-content{
+    position: absolute;
+    top: calc(100% + var(--spacing-8));
+    left: 0;
+    border: 2px solid var(--color-border-strong);
+    border-radius: var(--radius-8); 
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--color-background-light);
+    z-index: 30;
+}
+.dropdown-option{
+    border-bottom: 2px solid var(--color-border-strong);
+    height: fit-content;
+    padding: var(--spacing-8) var(--spacing-16);
+    width: 100%;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: var( --color-text);
+    background: transparent;
+    cursor: pointer;
+    font: inherit;
+    text-align: left;
+}
+.dropdown-option:hover{
+    background-color: var(--color-surface-light);
+    text-decoration: underline;
+    font-weight: var(--font-weight-semiBold);
+}
+.top-cell.is-disabled{
+    opacity: 0.6;
+    cursor: default;
+}
+.bottom-cell{
+    border: none;
+}
+.dropdown-content[hidden]{
+    display: none;
 }

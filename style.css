@@ -111,6 +111,7 @@ body{
     background: var(--color-background-light);
     display: flex;
     justify-content: center;
+    cursor: default;
 }
 main {
     flex: 1;
@@ -163,6 +164,7 @@ button {
 button:hover{
     background-color: var(--color-brand-hover);
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .body-large{
