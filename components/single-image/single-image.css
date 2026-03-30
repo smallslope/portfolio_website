@@ -2,35 +2,23 @@
     display: block;
     width: 100%;
     max-width: 100%;
-    margin: var(--spacing-24)
+    box-sizing: border-box;
+    margin: var(--spacing-24) auto;
+}
+.single-image-container{
+    width: 100%;
+    max-width: 100%;
+}
+.wrapper{
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
 }
 ::slotted(img){
+    display: block;
     width: 100%;
     max-width: 100%;
     max-height: 90vh;
-    display: block;
-}
-.btn-icon{
-    color: var( --color-text-inverse);
-    padding: 0 var(--spacing-8);
-}
-.button-with-icon{
-    display: flex;
-    align-items: center;
-    position: absolute;
-    bottom: 0.75rem;
-    right: 0.75rem;
-    padding: var(--spacing-8) var(--spacing-16);
-}
-.wrapper{
-    position: relative;
-}
-#modal{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width:100%;
-    height: 100%;
-    background-color: var( --color-modal);
-    display: none;
+    margin: 0 auto;
 }
